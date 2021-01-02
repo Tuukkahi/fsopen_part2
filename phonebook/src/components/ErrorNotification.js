@@ -11,11 +11,14 @@ const ErrorNotification = ({ message }) => {
         marginBottom: '10px',
     }
 
-    return (
-        <div style={style}>
-            {message}
-        </div>
-    )
+    if (message !== null) {
+        return (
+            <div style={style}>
+                {message}
+            </div>
+        )
+    }
+    return null
 }
 
 export default ErrorNotification
